@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon link -->
+    <link rel="shortcut icon" href="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--google font icon -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <style>
+            .material-symbols-outlined {
+              font-variation-settings:
+              'FILL' 1,
+              'wght' 400,
+              'GRAD' 0,
+              'opsz' 24
+              
+            }
+            </style>
+        <!--font awesome  link -->
+    <script src="https://kit.fontawesome.com/3c0978bdf1.js" crossorigin="anonymous"></script>
+    <title>Gmail clone using tailwing CSS</title>
+</head>
+
+<body class="bg-indigo-50 text-gray-700 h-screen overflow-y-hidden flex">
+    <!-- 1stleftsidebar starts -->
+    <div class="1stleftsidebar bg-indigo-100 w-16 h-screen ">
+        <i class="fa-solid fa-bars cursor-pointer fa-lg mt-8 ml-4"></i>
+        <div class="mail mt-8 ml-4">
+            <i class="fa-regular fa-envelope fa-lg"></i>
+            <p class="text-xs">Mail</p>
+        </div>
+        <div class="chat mt-8 ml-4">
+            <i class="fa-regular fa-message fa-lg"></i>
+            <p class="text-xs">Chat</p>
+        </div>
+        <div class="spaces mt-8 ml-4">
+            <i class="fa-solid fa-users fa-lg"></i>
+            <p class="text-xs">Spaces</p>
+        </div>
+        <div class="meet mt-8 ml-4">
+            <i class="fa-solid fa-video fa-lg"></i>
+            <p class="text-xs">Meet</p>
+        </div>
+    </div>
+    <!-- 1stleftsidebar ends -->
+    <!-- middleportion starts -->
+    <div class="middle_portion grow ">
+        <!-- header start -->
+        <div class="top flex flex-1 items-center justify-between h-16 p-4 ">
+            <div class="header_start flex items-center gap-2 p-2">
+                <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png""
+                        class=" max-h-[40px] ml-2 " />
+            </div>
+                <div class=" header_middle flex bg-indigo-100 rounded-full p-2 ml-14">
+                <i class="fa-solid fa-magnifying-glass p-2 cursor-pointer"></i>
+                <input type="text" placeholder="search mail" class="w-[500px] h-[35px] bg-transparent text-lg" />
+                <i class="fa-solid fa-sliders fa-lg mt-4 mr-2"></i>
+            </div>
+
+            <button class="header2ndmiddle flex items-center justify-center bg-indigo-100 rounded-full p-2 gap-2">
+                <i class="fa-solid fa-circle fa-xs" style="color: #3b8c31;"></i>
+                <p>Active</p>
+                <i class="fa-solid fa-angle-down"></i>
+            </button>
+
+            <div class="header_right flex items-center pr-20 gap-4">
+                <i class="fa-regular fa-circle-question cursor-pointer fa-lg"></i>
+                <i class="fa-solid fa-gear cursor-pointer fa-lg"></i>
+                <i class="fa-solid fa-grip p-1 cursor-pointer fa-lg"></i>
+
+            </div>
+        </div>
+        <!-- header end -->
+        <div class="bottom flex">
+            <!-- leftsection starts -->
+            <div class="2ndleftsidebar flex flex-col w-[250px] p-2 ">
+                <!-- for compose button -->
+                <button class="sidebar compose bg-sky-200 rounded-2xl p-2 w-[150px] mb-4 flex items-center  ">
+                    <i class="fa-solid fa-pen p-3"></i>Compose
+                </button>
+                <!-- for inbox -->
+                <div class="sidebar_option sidebar_option_active flex items-center bg-blue-200 rounded-2xl">
+                    <i class="fa-solid fa-inbox flex items-center p-2 ml-6"></i>
+                    <p class="font-semibold">Inbox</p>
+                </div>
+                <!-- for starred-->
+                <div class="sidebar_option flex items-center  ">
+                    <i class="fa-regular fa-star p-2 ml-6"></i>
+                    <p class="text-sx">Starred</p>
+                </div>
+
+                <div class="sidebar_option flex items-center ">
+                    <i class="fa-regular fa-clock p-2 ml-6"></i>
+                    <p>Snoozed</p>
+                </div>
+
+                <div class="sidebar_option flex items-center  ">
+                    <i class="fa-regular fa-paper-plane p-2 ml-6"></i>
+                    <p>Send</p>
+                </div>
+
+                <div class="sidebar_option flex items-center ">
+                    <i class="fa-regular fa-note-sticky p-2 ml-6"></i>
+                    <p>Drafts</p>
+                </div>
+
+                <div class="sidebar_option flex items-center ">
+                    <i class="fa-solid fa-angle-down p-2 ml-6"></i>
+                    <p>More</p>
+                </div>
+
+                <div class="sidebarfooter flex items-center ml-6">
+                    <h2 class="font-semibold">Labels</h2>
+                    <i class="fa-solid fa-plus p-2 ml-6"></i>
+                </div>
+                <div class="flex items-center ml-8 gap-3">
+                    <i class="fa-regular fa-bookmark"></i>
+                    <p>Scrum</p>
+                </div>
+            </div>
+            <!-- leftsection ends -->
+
+            <!-- rightsection starts -->
+            <div class="emaillist flex-1  rounded-2xl bg-white ml-2 mt-2">
+                <div class="settings t-0 flex items-center justify-between p-l-2 mb-2 mt-2 ">
+                    <div class="leftsetting px-1 ml-4">
+                        <i class="fa-regular fa-square p-1"></i>
+                        <i class="fa-solid fa-caret-down "></i>
+                        <i class="fa-solid fa-rotate-right px-4"></i>
+                        <i class="fa-solid fa-ellipsis-vertical px-4"></i>
+
+                    </div>
+                    <div class="rightsetting mr-6">
+                        <span class="text-xs"> 1-50 of 550 </span>
+                        <i class="fa-solid fa-angle-left p-2"></i>
+                        <i class="fa-solid fa-angle-right p-2"></i>
+                        <i class="fa-solid fa-keyboard p-2"></i>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+                <!-- section start -->
+                <div class="emaillist_section flex p-l-2 items-center border-b-2 border-slate-300 ">
+                    <div class="section_selected flex w-[250px]  py-4 ml-4 border-b-4 border-blue-600 text-blue-600">
+                        <i class="fa-solid fa-inbox flex items-center p-1 "></i>
+                        <h4>Primary</h4>
+                    </div>
+
+                    <div class="section_selected flex w-[300px]  py-4 ml-4">
+                        <i class="fa-solid fa-tag flex items-center p-1"></i>
+                        <h4>Promotions</h4>
+                    </div>
+
+                    <div class="section_selected flex w-[200px] py-4 ml-4">
+                        <i class="fa-solid fa-circle-info flex items-center p-1"></i>
+                        <h4>Updates</h4>
+                    </div>
+                </div>
+                <!-- section end -->
+                <!-- email list row starts -->
+                <div class="emaillist_List p-l-2 overflow-y-scroll h-[450px] bg-gray-50">
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center border-b-2 border-slate-300 ">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2 ">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center    border-b-2 border-slate-300">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center   border-b-2 border-slate-300">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center    border-b-2 border-slate-300 ">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center     border-b-2 border-slate-300">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center     border-b-2 border-slate-300">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center     border-b-2 border-slate-300">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center  border-b-2 border-slate-300   ">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center  border-b-2 border-slate-300   ">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center  border-b-2 border-slate-300   ">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center  border-b-2 border-slate-300   ">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center  border-b-2 border-slate-300   ">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center  border-b-2 border-slate-300   ">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center  border-b-2 border-slate-300   ">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center  border-b-2 border-slate-300   ">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center  border-b-2 border-slate-300   ">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+                    <!-- email row starts -->
+                    <div class="emailRow flex items-center  border-b-2 border-slate-300   ">
+                        <div class="emailRow_option flex items-center gap-4  py-2 ml-4">
+                            <i class="fa-regular fa-square p-1"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span class="material-symbols-outlined text-yellow-400">label_important</span>
+                            <h3>Title</h3>
+                        </div>
+
+
+                        <div class="description  flex-1 text-center  py-2">
+                            <h4>Step-by-Step: Connecting MongoDB with React.js for Full Stack Development
+                                |
+                                PW Skills</h4>
+                        </div>
+                        <div class="text-center  flex gap-2  p-2 ">
+                            <p class="">8:00</p>
+                            <p>AM</p>
+                        </div>
+
+                    </div>
+                    <!-- email row end -->
+
+                </div>
+            </div>
+
+            <!-- rightsection ends -->
+        </div>
+    </div>
+    <!-- middleportion ends -->
+    <!-- lastrightsidebar starts -->
+    <div class="lastrightsidebar flex flex-col items-center gap-6 w-16 h-screen py-4">
+        <div class="profile w-10 h-10 rounded-full bg-purple-800 text-white text-center">
+            <p class="mt-2">P</p>
+        </div>
+        <div class="calender w-8 h-8"><img src="./Img/calender.png" /></div>
+        <div class="light w-4 h-4"><img src="./Img/Google_Keep_icon.png" /></div>
+        <div class="tik w-6 h-4"><img src="./Img/Google_Tasks.png" /></div>
+        <div class="contact w-6 h-6"><img src="./Img/Google_Contacts_logo.png" /></div>
+        <div class="horizontal w-6 text-gray-600 "><img src="./Img/horizontal_line.png" /></div>
+        <div class="video w-8 h-8"><img src="./Img/pngtree-video-call.png" class="" /></div>
+        <div class="plus"><i class="fa-solid fa-plus"></i></div>
+        <div class="rightangle"><i class="fa-solid fa-angle-right"></i></div>
+    </div>
+
+    <!-- lastrightsidebar ends -->
+
+
+</body>
+
+</html>
